@@ -48,6 +48,13 @@
             </div>
             <br>
             <button class="btn btn-secondary mb-4" name="submit">Submit</button>
+            {% with message =get_flashed_messages () %}
+            {% if message %}
+            <div>
+                message was submitted successfully
+            </div>
+            {% endif %}
+            {% endwith %}
         </form>
      </div>
  </body>
